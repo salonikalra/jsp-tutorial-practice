@@ -2,12 +2,21 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
 	
 	<servlet>
-		<servlet-name>welcome2</servlet-name>
+		<servlet-name>welcome</servlet-name>
 		<servlet-class>com.cnb.WelcomeServelet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>welcome2</servlet-name>
+		<servlet-name>welcome</servlet-name>
 		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>love</servlet-name>
+		<servlet-class>com.cnb.LoveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>love</servlet-name>
+		<url-pattern>/love</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

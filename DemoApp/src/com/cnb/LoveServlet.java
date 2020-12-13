@@ -8,15 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class WelcomeServelet extends HttpServlet{
+public class LoveServlet extends HttpServlet {
 	
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException{
 		String fname = req.getParameter("fname");
 		String lname = req.getParameter("lname");
-		res.getWriter().println(fname + lname); 
+		res.getWriter().println(fname + " loves " + lname);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("love");
-		rd.forward(req, res);
 	}
 
 }
