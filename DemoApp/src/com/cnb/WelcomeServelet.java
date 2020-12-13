@@ -11,9 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 public class WelcomeServelet extends HttpServlet{
 	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		String fname = req.getParameter("fname");
-		String lname = req.getParameter("lname");
-		res.getWriter().println(fname + lname); 
+		
+		req.setAttribute("verb", "loves");
 		
 		RequestDispatcher rd = req.getRequestDispatcher("love");
 		rd.forward(req, res);

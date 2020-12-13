@@ -13,7 +13,9 @@ public class LoveServlet extends HttpServlet {
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException{
 		String fname = req.getParameter("fname");
 		String lname = req.getParameter("lname");
-		res.getWriter().println(fname + " loves " + lname);
+		
+		String verb = (String) req.getAttribute("verb");
+		res.getWriter().println(fname + " " + verb + " " + lname);
 		
 	}
 
