@@ -12,10 +12,12 @@ public class WelcomeServelet extends HttpServlet{
 	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		
-		req.setAttribute("verb", "loves");
+//		req.setAttribute("verb", "loves");
+//		
+//		RequestDispatcher rd = req.getRequestDispatcher("love");
+//		rd.forward(req, res);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("love");
-		rd.forward(req, res);
+		res.sendRedirect("love");
 	}
 
 }
