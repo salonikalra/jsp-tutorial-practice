@@ -17,7 +17,8 @@ public class WelcomeServelet extends HttpServlet{
 //		RequestDispatcher rd = req.getRequestDispatcher("love");
 //		rd.forward(req, res);
 		
-		res.sendRedirect("love");
+		String verb = "love";
+		res.sendRedirect("love?verb=" + verb);
 	}
 
 }
