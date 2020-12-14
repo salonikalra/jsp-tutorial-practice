@@ -28,8 +28,8 @@ public class WelcomeServelet extends HttpServlet{
 //		HttpSession session = req.getSession();
 //		session.setAttribute("verb", "loves");
 		
-		Cookie cookie = new Cookie("message", fname + "_loves_" + lname);
-		res.addCookie(cookie);
+//		Cookie cookie = new Cookie("message", fname + "_loves_" + lname);
+//		res.addCookie(cookie);
 		
 		res.sendRedirect("love");
 	}
