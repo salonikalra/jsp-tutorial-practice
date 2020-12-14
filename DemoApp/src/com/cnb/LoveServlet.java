@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class LoveServlet extends HttpServlet {
 	
@@ -16,7 +17,10 @@ public class LoveServlet extends HttpServlet {
 
 //		String verb = (String) req.getAttribute("verb");
 		
-		String verb = req.getParameter("verb");
+//		String verb = req.getParameter("verb");
+		
+		HttpSession session = req.getSession();
+		String verb =  (String) session.getAttribute("verb");
 		res.getWriter().println(verb);
 		
 	}
