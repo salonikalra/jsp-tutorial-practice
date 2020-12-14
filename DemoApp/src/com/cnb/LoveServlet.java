@@ -3,6 +3,7 @@ package com.cnb;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -33,8 +34,12 @@ public class LoveServlet extends HttpServlet {
 //			}
 //		}
 
-		ServletContext cntx = getServletContext();
-		String message = cntx.getInitParameter("message");
+//		ServletContext cntx = getServletContext();
+//		String message = cntx.getInitParameter("message");
+		
+		ServletConfig con = getServletConfig();
+		String message = con.getInitParameter("message");
+		
 		res.getWriter().println(message);
 		
 	}
