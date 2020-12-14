@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,9 +20,18 @@ public class LoveServlet extends HttpServlet {
 		
 //		String verb = req.getParameter("verb");
 		
-		HttpSession session = req.getSession();
-		String verb =  (String) session.getAttribute("verb");
-		res.getWriter().println(verb);
+//		HttpSession session = req.getSession();
+//		String verb =  (String) session.getAttribute("verb");
+//		res.getWriter().println(verb);
+		
+		String message = null;
+		Cookie cookies[] = req.getCookies();
+		for(Cookie c : cookies) {
+			if(c.getName().equals("message")) {
+				message = c.getValue();
+			}
+		}
+		res.getWriter().println(message);
 		
 	}
 
