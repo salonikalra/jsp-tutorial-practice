@@ -6,12 +6,14 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+@WebServlet("/love")
 public class LoveServlet extends HttpServlet {
 	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException{
@@ -37,10 +39,11 @@ public class LoveServlet extends HttpServlet {
 //		ServletContext cntx = getServletContext();
 //		String message = cntx.getInitParameter("message");
 		
-		ServletConfig con = getServletConfig();
-		String message = con.getInitParameter("message");
+//		ServletConfig con = getServletConfig();
+//		String message = con.getInitParameter("message");
+//		res.getWriter().println(message);
 		
-		res.getWriter().println(message);
+		res.getWriter().println("Redirected to LoveServlet Using Annotations");
 		
 	}
 
