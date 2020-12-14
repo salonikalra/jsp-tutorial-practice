@@ -8,5 +8,9 @@
 </head>
 <body>
 	<h1>Welcome to your first Java Server Page. Welcome to the cave!</h1>
+	
+	<%
+	out.println("This is written in a scriptlet");
+	%>
 </body>
 </html>
