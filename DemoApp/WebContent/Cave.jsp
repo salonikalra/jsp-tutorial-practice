@@ -7,10 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- DIRECTIVE -->
+	<%@ include file="header.jsp" %>
+	
+	<!-- DECLARATIVE -->
+	<%! int a =10; %>
+	
 	<h1>Welcome to your first Java Server Page. Welcome to the cave!</h1>
 	
-	<%
-	out.println("This is written in a scriptlet");
-	%>
-</body>
+	<!-- SCRIPTLET -->
+	<%	out.println("This is written in a scriptlet"); %>
+	
+	<!-- EXPRESSION -->
+	<%= "Wrote this string in an expession tag" %>
+	<%= a %>
+</body> 
 </html>
