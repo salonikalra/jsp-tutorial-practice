@@ -16,10 +16,16 @@
 	<h1>Welcome to your first Java Server Page. Welcome to the cave!</h1>
 	
 	<!-- SCRIPTLET -->
-	<%	out.println("This is written in a scriptlet"); %>
+	<%	out.println("This is written in a SCRIPTLET tag"); %>
+	
+	<br/>
 	
 	<!-- EXPRESSION -->
-	<%= "Wrote this string in an expession tag" %>
+	<%= "Wrote this string in an EXPRESSION tag" %>
+	
+	<br/>
+	
+	<%= "Value of a variable declared in DECLARATION tag = " %>
 	<%= a %>
 </body> 
 </html>

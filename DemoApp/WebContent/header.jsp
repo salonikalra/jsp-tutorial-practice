@@ -9,7 +9,8 @@
 <body>
 <!-- EXPRESSION TAG -->
 <%=
-	"I belong to the header file"
+	"I belong to the header file imported by DIRECTIVE tag"
 %>
+
 </body>
 </html>
