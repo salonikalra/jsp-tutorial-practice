@@ -16,7 +16,14 @@
 	<h1>Welcome to your first Java Server Page. Welcome to the cave!</h1>
 	
 	<!-- SCRIPTLET -->
-	<%	out.println("This is written in a SCRIPTLET tag"); %>
+	<%	out.println("This is written in a SCRIPTLET tag" + "<br/>"); 
+		try{
+			int b = 7/0;
+		}
+		catch(Exception e){
+			out.println(e.getMessage());
+		}
+	%>
 	
 	<br/>
 	
