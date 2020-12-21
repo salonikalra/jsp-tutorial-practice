@@ -43,7 +43,14 @@ public class LoveServlet extends HttpServlet {
 //		String message = con.getInitParameter("message");
 //		res.getWriter().println(message);
 		
-		res.getWriter().println("Redirected to LoveServlet Using Annotations");
+//		res.getWriter().println("Redirected to LoveServlet Using sendRedirect() and Annotations");
+		
+		HttpSession session = req.getSession();
+		session.setAttribute("message", "Redirected from LoveServlet, with session "
+				+ "object attached, message displayed "
+				+ "using Expression Language");
+		res.sendRedirect("EL.jsp");
+		 
 		
 	}
 
