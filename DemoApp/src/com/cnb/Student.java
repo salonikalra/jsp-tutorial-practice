@@ -7,5 +7,9 @@ public class Student {
 		super();
 		this.name = name;
 		this.sid = sid;
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", sid=" + sid + "]";
 	}	
 }

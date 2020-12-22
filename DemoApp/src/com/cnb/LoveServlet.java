@@ -51,7 +51,7 @@ public class LoveServlet extends HttpServlet {
 				+ "using Expression Language");
 		
 		Student s = new Student("Saloni", 1);
-		session.setAttribute("student", s.name);
+		session.setAttribute("student", s);
 		
 		res.sendRedirect("EL.jsp");
 	}

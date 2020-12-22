@@ -12,13 +12,6 @@
 	<br>
 	<cnb:out value="blah"></cnb:out>
 	<br>
-	
-	<%
-		String message = (String)session.getAttribute("message");
-		out.println(message);
-		
-		String student = (String)session.getAttribute("student");
-		out.println("<br>"+student);
-	%>
+	${student }
 </body>
 </html>
